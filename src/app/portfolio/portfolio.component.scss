@@ -1,0 +1,24 @@
+@import '../../styles.scss';
+
+.max-width {
+    max-width: 1440px;
+    margin: 0 auto;
+}
+
+.landing-page {
+    position: relative;
+    @include dflex();
+    flex-direction: column;
+    height: 100vh;
+    width: 100%;
+    background: linear-gradient(45deg, #1C1C1C 30%, #08463B);
+}
+
+.aboute-me {
+    position: relative;
+    @include dflex();
+    flex-direction: column;
+    height: 100vh;
+    width: 100%;
+    background: linear-gradient(45deg, #1C1C1C 70%, #08463B);
+}

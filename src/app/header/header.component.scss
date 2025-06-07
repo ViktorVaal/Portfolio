@@ -1,0 +1,64 @@
+@import '../../styles.scss';
+
+.change-lang {
+    width: fit-content;
+    cursor: pointer;
+    border: 1px solid #3DCFB680;
+    border-radius: 100px;
+    color: #3DCFB680;
+    @include dflex();
+    transition: all 100ms ease-in-out;
+
+    &:hover {
+        border-color: white;
+        color: #3DCFB6;
+    }
+
+    >div {
+        padding: 4px 12px;
+        border-radius: 100px;
+        font-size: 16px;
+        transition: all 100ms ease-in-out;
+    }
+}
+
+.active-btn {
+    background-color: #3DCFB6;
+    color: white;
+    font-weight: bold;
+}
+
+.nav-container {
+    @include dflex($g: 24px);
+
+    >nav {
+        @include dflex($g: 24px);
+
+        >a {
+            text-decoration: none;
+            position: relative;
+            color: white;
+            font-size: 20px;
+            letter-spacing: -3%;
+
+            &::after {
+                opacity: 0;
+                color: #3DCFB6;
+                content: '';
+                position: absolute;
+                left: 50%;
+                bottom: -10px;
+                transform: translateX(-50%);
+                width: 6px;
+                height: 6px;
+                background-color: currentColor;
+                border-radius: 50%;
+                transition: all 125ms ease-in-out;
+            }
+
+            &:hover::after {
+                opacity: 1;
+            }
+        }
+    }
+}

@@ -1,0 +1,201 @@
+@import '../../styles.scss';
+
+
+
+.header {
+  height: 98px;
+  width: 100%;
+  max-width: 1440px;
+  padding: 0 96px;
+  position: absolute;
+  top: 0;
+  @include dflex($jc: space-between);
+}
+
+.title {
+  color: white;
+  @include dflex($g: 12px);
+  flex-direction: column;
+
+  >span {
+    font-size: 40px;
+  }
+
+  >.my-name {
+    font-size: 128px;
+    font-weight: 600;
+    line-height: 100%;
+    letter-spacing: -2%;
+  }
+
+  >div {
+    @include dflex($g: 48px);
+  }
+}
+
+.sliding-link {
+  overflow: hidden;
+  position: relative;
+  display: inline-block;
+  padding: 12px 24px;
+  border: 1px solid white;
+  border-radius: 100px;
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+  font-family: Karla;
+  transition: border-color 0.3s, color 0.3s;
+
+  &:hover {
+    color: #3DCFB6;
+    border-color: #3DCFB6;
+  }
+
+  .link-text {
+    display: inline-block;
+    white-space: nowrap;
+    animation: none;
+  }
+
+  &:hover .link-text {
+    animation: slide-through 3s infinite linear;
+  }
+}
+
+@keyframes slide-through {
+  0% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+
+  49% {
+    transform: translateX(-150%);
+    opacity: 0;
+  }
+
+  50% {
+    transform: translateX(150%);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.left-right-wrapper {
+  padding: 0 96px;
+  width: 100%;
+  max-width: 1440px;
+  @include dflex($ai: end, $jc: space-between);
+  position: absolute;
+  bottom: 0;
+
+  >div {
+    width: 30px;
+    @include dflex($g: 24px);
+    flex-direction: column;
+
+    >.arrow-container {
+      cursor: pointer;
+      @include dflex();
+      padding: 16px 10px;
+      border: 1px solid #3DCFB6;
+      border-radius: 32px;
+    }
+  }
+}
+
+.scroll-down-container {
+  height: 312px;
+}
+
+.contact-container {
+  @include dflex($g: 24px);
+  flex-direction: column;
+  height: 480px;
+
+}
+
+.icon-wrapper {
+  position: relative;
+  height: 26px;
+  
+  &::after {
+    opacity: 0;
+    content: '';
+    position: absolute;
+    right: -10px;
+    bottom: 50%;
+    transform: translateY(50%);
+    width: 6px;
+    height: 6px;
+    background-color: #3DCFB6;
+    border-radius: 50%;
+    transition: all 125ms ease-in-out;
+  }
+
+  &:hover::after {
+    opacity: 1;
+  }
+
+  >svg {
+    transition: all 500ms ease-in-out;
+    position: relative;
+    cursor: pointer;
+
+    &:hover path {
+      fill: white;
+    }
+  }
+}
+
+.email {
+  height: 155px;
+  >a {
+    text-decoration: none;
+    color: white;
+
+    &:hover {
+      color: #3DCFB6;
+    }
+  }
+}
+
+.desktop-email {
+  writing-mode: vertical-rl;
+  transform: rotate(180deg);
+}
+
+.arrow-container:hover .arrow-down {
+  animation: arrowDown linear infinite 1000ms;
+}
+
+@keyframes arrowDown {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(10px);
+  }
+  
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.vl {
+  width: 1px;
+  background-color: #3DCFB6;
+  flex: 1;
+}
+
+.banner {
+  height: 62px;
+  width: 1480px;
+  position: absolute;
+  bottom: 0;
+  transform: rotate(-3deg);
+  transform-origin: left bottom;
+}

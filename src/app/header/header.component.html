@@ -1,0 +1,16 @@
+<div class="nav-container">
+    <div (click)="toggleLang()" class="change-lang">
+        <div [ngClass]="{'active-btn': langEnglish}" class="english">EN</div>
+        <div [ngClass]="{'active-btn': !langEnglish}" class="german">DE</div>
+    </div>
+
+    <nav>
+        <a class="dot-underline" href="#aboutMe">About me</a>
+        <a class="dot-underline" href="#skills">Skills</a>
+        <a class="dot-underline" href="#projects">Projects</a>
+    </nav>
+</div>
+
+<div>
+    <span>icon</span>
+</div>
