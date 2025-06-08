@@ -14,22 +14,24 @@
 
 <div class="left-right-wrapper">
     <div class="scroll-down-container">
-        <div class="arrow-container">
-            <img class="arrow-down" src="assets/img/arrow-down.png" alt="">
-        </div>
+        <a href="#aboutMe">
+            <div class="arrow-container">
+                <img class="arrow-down" src="assets/img/arrow-down.png" alt="">
+            </div>
+        </a>
         <div class="vl"></div>
     </div>
     <div class="contact-container">
         <div class="email">
             @if(desktop) {
-                <a class="desktop-email" href="">
-                    {{ email }}
-                </a>
-            } 
+            <a class="desktop-email" href="">
+                {{ email }}
+            </a>
+            }
             @if (!desktop) {
-                <a class="mobile-email" href="">
-                    <img src="" alt="">
-                </a>
+            <a class="mobile-email" href="">
+                <img src="" alt="">
+            </a>
             }
         </div>
 

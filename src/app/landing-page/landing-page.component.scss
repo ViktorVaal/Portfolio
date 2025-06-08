@@ -97,12 +97,14 @@
     @include dflex($g: 24px);
     flex-direction: column;
 
-    >.arrow-container {
-      cursor: pointer;
-      @include dflex();
-      padding: 16px 10px;
-      border: 1px solid #3DCFB6;
-      border-radius: 32px;
+    >a{ 
+      >.arrow-container {
+        cursor: pointer;
+        @include dflex();
+        padding: 16px 10px;
+        border: 1px solid #3DCFB6;
+        border-radius: 32px;
+      }
     }
   }
 }
