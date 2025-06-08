@@ -1,0 +1,121 @@
+@import '../../../styles.scss';
+
+.max-width {
+    @include dflex($jc: space-between);
+    width: 100%;
+    max-width: 1440px;
+    height: 100%;
+    margin: 0 auto;
+}
+
+.appear-left {
+    animation: appearLeft linear;
+    animation-timeline: view();
+    animation-range: entry 0 cover 40%;
+}
+
+.appear-right {
+    animation: appearRight linear;
+    animation-timeline: view();
+    animation-range: entry 0 cover 40%;
+}
+
+.my-image {
+    position: relative;
+    align-self: flex-start;
+    width: auto;
+    max-width: 50%;
+    margin-top: 300px;
+
+    >.profile-picture {
+        filter: grayscale(100);
+        border-radius: 50px;
+        height: 40vh;
+        width: 100%;
+        object-fit: cover;
+        transition: all 125ms ease-in-out;
+
+        &:hover {
+            transform: translate(30px, -30px);
+        }
+    }
+}
+
+.green-stripes {
+    position: absolute;
+    height: 99%;
+    width: 100%;
+    border-radius: 50px;
+}
+
+.aboute-me-wrapper {
+    @include dflex($ai: start, $g: 20px);
+    flex-direction: column;
+    margin-bottom: 300px;
+    align-self: flex-end;
+    color: white;
+    font-size: 18px;
+    height: auto;
+    width: auto;
+    max-width: 50%;
+
+    >h3 {
+        font-family: Karla;
+        color: #3DCFB6;
+        font-size: 24px;
+    }
+
+    >div {
+        background-color: #3DCFB61A;
+        border: 1px solid #3DCFB6;
+        border-radius: 30px;
+        padding: 32px;
+        @include dflex($ai: start, $g: 40px);
+        flex-direction: column;
+
+        >h2 {
+            font-family: Fira Code;
+            color: #3DCFB6;
+            font-size: 64px;
+            letter-spacing: -3%;
+            font-weight: 700;
+        }
+    }
+}
+
+.aboute-me-info-text {
+    @include dflex($ai: start, $g: 32px);
+    flex-direction: column;
+
+    >div {
+        @include dflex($ai: start, $g: 24px);
+
+        >img {
+            transform: translateX(-50%);
+        }
+    }
+}
+
+@keyframes appearLeft {
+    from {
+        opacity: 0;
+        scale: 0;
+    }
+
+    to {
+        opacity: 1;
+        scale: 1;
+    }
+}
+
+@keyframes appearRight {
+    from {
+        opacity: 0;
+        scale: 0;
+    }
+
+    to {
+        opacity: 1;
+        scale: 1;
+    }
+}

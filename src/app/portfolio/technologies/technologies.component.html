@@ -1,0 +1,48 @@
+<div class="technologie-wrapper">
+
+    <div class="skill-set-wrapper">
+        <h3 class="green-text">Technologies</h3>
+
+        <div class="skill-set-container">
+            <h2>Skill Set</h2>
+
+            <span>
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ullam nostrum quas ipsa est esse, veritatis
+                dolorum velit provident, consequuntur ex assumenda ipsum quidem, vel facilis dolor nobis fuga nam.
+                Iure.
+            </span>
+
+            <h3>You need
+                <span class="green-text">
+                    another skill?
+                </span>
+            </h3>
+
+            <span>
+                Feel free to contact me. I look forward to expanding on my previous knowledge.
+            </span>
+
+            <a href="" class="lets-talk-btn">
+                <span class="link-text">Let's Talk</span>
+            </a>
+        </div>
+    </div>
+
+    <div class="tech-icons-wrapper">
+        @for (icon of icons; track $index) {
+        <div class="tech-icon">
+            <img [src]="'assets/icons/' + icon.path" alt="">
+            <span>{{ icon.name }}</span>
+        </div>
+        }
+        <div (mouseleave)="hideOverlay()" (mouseenter)="showGrowthOverlay()" class="tech-icon growth-icon-animation">
+            <img class="growth-icon-scale" src="assets/icons/icon_11.png" alt="">
+            <span>Growth mindset</span>
+            <div [ngStyle]="{opacity: showOverlay ? 1 : 0}" class="overlay">
+                <img src="assets/img/growth-overlay.png" alt="">
+            </div>
+        </div>
+
+    </div>
+
+</div>

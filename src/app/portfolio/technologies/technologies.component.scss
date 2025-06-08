@@ -1,0 +1,163 @@
+@import '../../../styles.scss';
+
+.technologie-wrapper {
+    @include dflex($jc: space-between, $g: 80px);
+    width: 100%;
+    max-width: 1440px;
+    color: white;
+}
+
+.green-text {
+    color: #3DCFB6;
+}
+
+.skill-set-wrapper {
+    @include dflex($ai: start, $g: 20px);
+    flex-direction: column;
+    animation: appearLeft linear;
+    animation-timeline: view();
+    animation-range: entry 0 cover 40%;
+}
+
+.skill-set-container {
+    @include dflex($ai: start, $g: 40px);
+    flex-direction: column;
+    border: 1px solid #3DCFB6;
+    border-radius: 30px;
+    padding: 32px;
+    background-color: #3DCFB61A;
+
+    >h3 {
+        font-family: Karla;
+    }
+
+    >h2 {
+        color: #3DCFB6;
+        font-family: Fira Code;
+        font-size: 64px;
+        font-weight: 700;
+    }
+
+    >span {
+        font-size: 18px;
+        font-family: Karla;
+    }
+
+}
+
+.lets-talk-btn {
+    text-decoration: none;
+    color: white;
+    padding: 12px 24px;
+    border: 1px solid white;
+    border-radius: 100px;
+    overflow: hidden;
+
+    &:hover {
+        color: #3DCFB6;
+        border-color: #3DCFB6;
+    }
+
+    .link-text {
+        display: inline-block;
+        white-space: nowrap;
+        animation: none;
+        font-family: Karla;
+    }
+
+    &:hover .link-text {
+        animation: slide-through 2s infinite linear;
+    }
+}
+
+.tech-icons-wrapper {
+    @include dflex($jc: start, $g: 72px);
+    flex-wrap: wrap;
+    animation: appearRight linear;
+    animation-timeline: view();
+    animation-range: entry 0 cover 40%;
+}
+
+.tech-icon {
+    overflow: visible;
+    position: relative;
+    @include dflex($g: 8px);
+    flex-direction: column;
+    width: 104px;
+    height: 104px; // oder eine passende Höhe
+    text-align: center;
+    overflow: visible; // falls das Bild herausragt
+
+    >img {
+        transition: transform 200ms ease-in-out;
+        transform-origin: center;
+    }
+
+    &:hover .growth-icon-scale {
+        transform: scale(1.1);
+    }
+}
+
+.growth-icon-animation {
+    transition: all 200ms ease-out;
+
+    &:hover {
+        color: #3DCFB6;
+
+    }
+}
+
+.overlay {
+    z-index: 10;
+    position: absolute;
+    left: -4%;
+    bottom: 75%;
+    pointer-events: none;
+    transition: all 500ms linear;
+}
+
+@keyframes slide-through {
+    0% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+
+    49% {
+        transform: translateX(-150%);
+        opacity: 0;
+    }
+
+    50% {
+        transform: translateX(150%);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes appearLeft {
+    from {
+        opacity: 0;
+        scale: 0;
+    }
+
+    to {
+        opacity: 1;
+        scale: 1;
+    }
+}
+
+@keyframes appearRight {
+    from {
+        opacity: 0;
+        scale: 0;
+    }
+
+    to {
+        opacity: 1;
+        scale: 1;
+    }
+}

@@ -6,7 +6,6 @@
   height: 98px;
   width: 100%;
   max-width: 1440px;
-  padding: 0 96px;
   position: absolute;
   top: 0;
   @include dflex($jc: space-between);
@@ -58,7 +57,7 @@
   }
 
   &:hover .link-text {
-    animation: slide-through 3s infinite linear;
+    animation: slide-through 2s infinite linear;
   }
 }
 
@@ -85,7 +84,6 @@
 }
 
 .left-right-wrapper {
-  padding: 0 96px;
   width: 100%;
   max-width: 1440px;
   @include dflex($ai: end, $jc: space-between);
@@ -97,7 +95,7 @@
     @include dflex($g: 24px);
     flex-direction: column;
 
-    >a{ 
+    >a {
       >.arrow-container {
         cursor: pointer;
         @include dflex();
@@ -123,7 +121,7 @@
 .icon-wrapper {
   position: relative;
   height: 26px;
-  
+
   &::after {
     opacity: 0;
     content: '';
@@ -142,19 +140,22 @@
     opacity: 1;
   }
 
-  >svg {
-    transition: all 500ms ease-in-out;
-    position: relative;
-    cursor: pointer;
+  >a {
+    >svg {
+      transition: all 500ms ease-in-out;
+      position: relative;
+      cursor: pointer;
 
-    &:hover path {
-      fill: white;
+      &:hover path {
+        fill: white;
+      }
     }
   }
 }
 
 .email {
   height: 155px;
+
   >a {
     text-decoration: none;
     color: white;
@@ -178,10 +179,11 @@
   0% {
     transform: translateY(0);
   }
+
   50% {
     transform: translateY(10px);
   }
-  
+
   100% {
     transform: translateY(0);
   }
@@ -195,7 +197,8 @@
 
 .banner {
   height: 62px;
-  width: 1480px;
+  width: 100%;
+  max-width: 1480px;
   position: absolute;
   bottom: 0;
   transform: rotate(-3deg);
