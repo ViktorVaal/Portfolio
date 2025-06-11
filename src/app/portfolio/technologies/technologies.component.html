@@ -1,6 +1,6 @@
 <div class="technologie-wrapper">
 
-    <div class="skill-set-wrapper">
+    <div class="skill-set-wrapper appear">
         <h3 class="green-text">Technologies</h3>
 
         <div class="skill-set-container">
@@ -28,10 +28,10 @@
         </div>
     </div>
 
-    <div class="tech-icons-wrapper">
+    <div class="tech-icons-wrapper appear">
         @for (icon of icons; track $index) {
         <div class="tech-icon">
-            <img [src]="'assets/icons/' + icon.path" alt="">
+            <img class="growth-icon-scale" [src]="'assets/icons/' + icon.path" alt="">
             <span>{{ icon.name }}</span>
         </div>
         }

@@ -1,0 +1,97 @@
+@import '../../../styles.scss';
+
+
+.projects-wrapper {
+    width: 100%;
+    color: white;
+
+    >h3 {
+        margin-bottom: 20px;
+        color: #3DCFB6;
+        font-size: 24px;
+        font-family: Karla;
+    }
+}
+
+.project-name {
+    @include dflex($g: 8px);
+    font-size: 24px;
+
+    >img {
+        opacity: 0;
+        transition: all 125ms ease-in-out;
+    }
+}
+
+.featured-projects-wrapper {
+    @include dflex($ai: start, $jc: start, $g: 40px);
+    flex-direction: column;
+
+    >h2 {
+        color: #3DCFB6;
+        font-family: Fira Code;
+        font-size: 64px;
+        letter-spacing: -3%;
+    }
+
+    >span {
+        font-family: Karla;
+        font-size: 18px;
+        font-weight: 400;
+    }
+}
+
+.projects-container {
+    width: 70%;
+
+    >div {
+        position: relative;
+        padding: 40px 32px;
+        @include dflex($jc: space-between);
+        width: 100%;
+        border-top: 1px solid #3DCFB6;
+        transition: all 125ms ease-in-out;
+
+        &:nth-child(3) {
+            border-bottom: 1px solid #3DCFB6;
+        }
+
+        &:hover {
+            background-color: #3DCFB64D;
+        }
+
+        &:hover {
+
+            .arrow-outward,
+            .join-image {
+                opacity: 1;
+            }
+        }
+    }
+}
+
+.technologies {
+    @include dflex($g: 8px);
+
+    >span {
+        display: flex;
+        align-items: center;
+
+        &:not(:last-child)::after {
+            content: '';
+            height: 15px;
+            width: 2px;
+            background-color: #3DCFB6;
+            margin-left: 8px;
+            display: inline-block;
+        }
+    }
+}
+
+.join-image {
+    position: absolute;
+    left: 110%;
+    top: -10px;
+    opacity: 0;
+    transition: all 125ms ease-in-out;
+}

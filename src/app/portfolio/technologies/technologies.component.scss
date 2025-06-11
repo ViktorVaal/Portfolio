@@ -14,9 +14,6 @@
 .skill-set-wrapper {
     @include dflex($ai: start, $g: 20px);
     flex-direction: column;
-    animation: appearLeft linear;
-    animation-timeline: view();
-    animation-range: entry 0 cover 40%;
 }
 
 .skill-set-container {
@@ -73,9 +70,6 @@
 .tech-icons-wrapper {
     @include dflex($jc: start, $g: 72px);
     flex-wrap: wrap;
-    animation: appearRight linear;
-    animation-timeline: view();
-    animation-range: entry 0 cover 40%;
 }
 
 .tech-icon {
@@ -113,7 +107,7 @@
     left: -4%;
     bottom: 75%;
     pointer-events: none;
-    transition: all 500ms linear;
+    transition: all 200ms linear;
 }
 
 @keyframes slide-through {
@@ -135,29 +129,5 @@
     100% {
         transform: translateX(0);
         opacity: 1;
-    }
-}
-
-@keyframes appearLeft {
-    from {
-        opacity: 0;
-        scale: 0;
-    }
-
-    to {
-        opacity: 1;
-        scale: 1;
-    }
-}
-
-@keyframes appearRight {
-    from {
-        opacity: 0;
-        scale: 0;
-    }
-
-    to {
-        opacity: 1;
-        scale: 1;
     }
 }

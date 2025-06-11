@@ -1,26 +1,25 @@
 @import '../../styles.scss';
 
 .landing-page {
-    position: relative;
-    @include dflex();
+    @include componentBaseStyle();
     flex-direction: column;
-    height: 100vh;
-    width: 100%;
-    background: linear-gradient(45deg, #1C1C1C 30%, #08463B);
+    // background: linear-gradient(45deg, #1C1C1C 30%, #08463B);
 }
 
 .aboute-me {
-    position: relative;
-    @include dflex($jc: space-between);
-    height: 100vh;
-    width: 100%;
-    background: linear-gradient(45deg, #1C1C1C 70%, #08463B);
+     @include componentBaseStyle($jc: space-between);
+    // background: linear-gradient(45deg, #1C1C1C 70%, #08463B);
 }
 
 .technologies {
-    @include dflex();
+    @include componentBaseStyle();
     height: 695px;
     width: 100vw;
     max-width: 100%;
     background: radial-gradient(22.43% 43.85% at 1.22% 52.45%, rgb(6, 51, 43) 0%, #1C1C1C 100%);
 }
+
+.projects {
+    @include componentBaseStyle($jc: start);
+}
+

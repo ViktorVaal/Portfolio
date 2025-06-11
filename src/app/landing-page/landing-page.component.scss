@@ -3,9 +3,9 @@
 
 
 .header {
+  padding: 0 96px;
   height: 98px;
   width: 100%;
-  max-width: 1440px;
   position: absolute;
   top: 0;
   @include dflex($jc: space-between);
@@ -84,8 +84,8 @@
 }
 
 .left-right-wrapper {
+  padding: 0 96px;
   width: 100%;
-  max-width: 1440px;
   @include dflex($ai: end, $jc: space-between);
   position: absolute;
   bottom: 0;
@@ -198,7 +198,6 @@
 .banner {
   height: 62px;
   width: 100%;
-  max-width: 1480px;
   position: absolute;
   bottom: 0;
   transform: rotate(-3deg);
