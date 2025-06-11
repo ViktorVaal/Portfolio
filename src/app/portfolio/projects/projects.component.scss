@@ -45,6 +45,7 @@
     width: 70%;
 
     >div {
+        cursor: pointer;
         position: relative;
         padding: 40px 32px;
         @include dflex($jc: space-between);
@@ -63,7 +64,7 @@
         &:hover {
 
             .arrow-outward,
-            .join-image {
+            .project-image {
                 opacity: 1;
             }
         }
@@ -88,7 +89,7 @@
     }
 }
 
-.join-image {
+.project-image {
     position: absolute;
     left: 110%;
     top: -10px;

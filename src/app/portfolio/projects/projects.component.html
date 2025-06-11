@@ -10,51 +10,22 @@
 
         <div class="projects-container">
 
-            <div class="project-join">
+            @for (project of projects; track $index) {
+            <div  (click)="openProjectOverlay($index)" class="project-container">
                 <div class="project-name">
-                    <h4>Join</h4>
+                    <h4>{{ project.name.replace('-', ' ') }}</h4>
                     <img class="arrow-outward" src="assets/img/arrow_outward.png" alt="">
                 </div>
 
                 <div class="technologies">
-                    <span>Angular</span>
-                    <span>TypeScript</span>
-                    <span>HTML</span>
-                    <span>CSS</span>
-                    <span>Firebase</span>
+                    @for (technologie of project.technologies; track $index) {
+                    <span>{{ technologie }}</span>
+                    }
                 </div>
-
-                <img class="join-image" src="assets/img/join-hover-image.png" alt="">
+                <img class="project-image"  [ngStyle]="{ top: (($index + 1) * -18) + 'px' }" [src]="'assets/img/' + project.name + '-hover-image.png'" alt="">
             </div>
-
-            <div class="project-epl">
-                <div class="project-name">
-                    <h4>El Pollo Loco</h4>
-                    <img class="arrow-outward" src="assets/img/arrow_outward.png" alt="">
-                </div>
-
-                <div class="technologies">
-                    <span>HMTL</span>
-                    <span>CSS</span>
-                    <span>Javascript</span>
-                </div>
-                <img style="top: -35%;" class="join-image" src="assets/img/epl-hover-image.png" alt="">
-            </div>
-
-            <div class="project-da-bubble">
-                <div class="project-name">
-                    <h4>DA Bubble</h4>
-                    <img class="arrow-outward" src="assets/img/arrow_outward.png" alt="">
-                </div>
-
-                <div class="technologies">
-                    <span>Angular</span>
-                    <span>Firebase</span>
-                    <span>TypeScript</span>
-                </div>
-                <img style="top: -70%;" class="join-image" src="assets/img/da-bubble-hover-image.png" alt="">
-
-            </div>
+            }
         </div>
     </div>
 </div>
+
