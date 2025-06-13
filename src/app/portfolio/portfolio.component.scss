@@ -13,15 +13,21 @@
 }
 
 .technologies {
-    @include componentBaseStyle();
+    @include componentBaseStyle($ai: start);
     height: 695px;
     width: 100vw;
-    max-width: 100%;
+    max-width: 1980px;
     background: radial-gradient(22.43% 43.85% at 1.22% 52.45%, rgb(6, 51, 43) 0%, #1C1C1C 100%);
 }
 
 .projects {
-    @include componentBaseStyle($jc: start);
+    @include componentBaseStyle($jc: start, $ai: start);
+    height: calc(175px + 473px);
     position: relative;
+}
+
+.contact-me {
+    @include componentBaseStyle();
+    
 }
 

@@ -23,8 +23,10 @@ export class ProjectOverlayComponent {
         { iconName: 'Firebase', iconPath: 'icon_4.png' },
         { iconName: 'JavaScript', iconPath: 'icon_7.png' },
       ],
-      imagepath: 'join-overlay.png'
+      imagepath: 'join-overlay.png',
+      githubUrl: 'Join'
     },
+
     {
       name: 'El Pollo Loco',
       description: 'A simple Jump-and-Run game based on an object-oriented approach. Help Pepe to find coins and tabasco salsa to fight against the crazy hen.',
@@ -33,8 +35,10 @@ export class ProjectOverlayComponent {
         { iconName: 'CSS', iconPath: 'icon_3.png' },
         { iconName: 'JavaScript', iconPath: 'icon_7.png' },
       ],
-      imagepath: 'epl-overlay.png'
+      imagepath: 'epl-overlay.png',
+      githubUrl: 'EL-POLLO-LOCO'
     },
+
     {
       name: 'DA Bubble',
       description: 'This App is a Slack Clone App. It revolutionizes team communication and collaboration with its intuitive interface, real-time messaging, and robust channel organization.',
@@ -45,7 +49,7 @@ export class ProjectOverlayComponent {
         { iconName: 'Firebase', iconPath: 'icon_4.png' },
         { iconName: 'TypeScript', iconPath: 'icon_10.png' },
       ],
-      imagepath: 'da-bubble-overlay.png'
+      imagepath: 'da-bubble-overlay.png',
     }
   ];
 

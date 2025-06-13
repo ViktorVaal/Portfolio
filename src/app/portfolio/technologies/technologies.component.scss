@@ -1,9 +1,8 @@
 @import '../../../styles.scss';
 
 .technologie-wrapper {
-    @include dflex($jc: space-between, $g: 80px);
+    @include dflex($jc: space-between);
     width: 100%;
-    max-width: 1440px;
     color: white;
 }
 
@@ -14,6 +13,7 @@
 .skill-set-wrapper {
     @include dflex($ai: start, $g: 20px);
     flex-direction: column;
+    max-width: 600px;
 }
 
 .skill-set-container {
@@ -70,6 +70,7 @@
 .tech-icons-wrapper {
     @include dflex($jc: start, $g: 72px);
     flex-wrap: wrap;
+    max-width: 650px;
 }
 
 .tech-icon {

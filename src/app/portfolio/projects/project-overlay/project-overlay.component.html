@@ -25,14 +25,14 @@
                 </div>
 
                 <div class="btn-wrapper">
-                    <a class="overlay-btn" href="">
+                    <a target="_blank" class="overlay-btn" [href]="'https://github.com/ViktorVaal/' + project.githubUrl">
                         GitHub
-                        <img src="assets/img/green-arrow_outward.png" alt="">
+                        <img class="link-arrow" src="assets/img/green-arrow_outward.png" alt="">
                     </a>
 
                     <a class="overlay-btn" href="">
                         Live Test
-                        <img src="assets/img/green-arrow_outward.png" alt="">
+                        <img class="link-arrow" src="assets/img/green-arrow_outward.png" alt="">
                     </a>
                 </div>
             </div>
@@ -48,6 +48,7 @@
 
             <div (click)="nextProject()" class="next-project">
                 <span>Next project</span>
+                <img src="assets/img/green-arrow-forward.png" alt="">
             </div>
         </div>
     </div>
