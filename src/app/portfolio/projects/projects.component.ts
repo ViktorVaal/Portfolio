@@ -1,21 +1,28 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
+import { ProjectOverlayComponent } from './project-overlay/project-overlay.component'
 
 @Component({
   selector: 'app-projects',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, ProjectOverlayComponent],
   templateUrl: './projects.component.html',
   styleUrl: './projects.component.scss'
 })
 export class ProjectsComponent {
+  selectedProjectIndex: number | null = null;
+
   projects = [
-    {name: 'Join', technologies: ['Angular', 'TypeScript', 'HMTL', 'CSS', 'Firebase']},
+    {name: 'Join', technologies: ['HTML', 'CSS', 'JavaScript', 'Firebase']},
     {name: 'El-Pollo-Loco', technologies: [ 'HMTL', 'CSS', 'JavaScript']},
-    {name: 'DA-Bubble', technologies: [ 'Angular', 'Firebase', 'TypeScript']}
+    {name: 'DA-Bubble', technologies: ['HTML', 'CSS', 'Angular', 'Firebase', 'TypeScript']}
   ]
 
-  openProjectOverlay($index: number) {
-    
+  openProjectOverlay(index: number) {
+    this.selectedProjectIndex = index;
+  }
+
+  closeProjectOverlay() {
+    this.selectedProjectIndex = null;
   }
 }

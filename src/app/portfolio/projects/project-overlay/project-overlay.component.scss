@@ -1,0 +1,80 @@
+@import '../../../../styles.scss';
+
+.project-overlay-background {
+    padding: 0 96px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5);
+    @include dflex();
+}
+
+.overlay-container {
+    position: relative;
+    @include dflex($jc: space-between, $g: 10%);
+    padding: 80px;
+    height: fit-content;
+    width: fit-content;
+    border: 1px solid #3DCFB6;
+    border-radius: 30px;
+    background: linear-gradient(45deg, #1C1C1C 30%, #08463B);
+}
+
+.overlay-left {
+    width: 480px;
+    @include dflex($ai: start, $g: 40px);
+    flex-direction: column;
+    color: white;
+}
+
+.headlines {
+    @include dflex($ai: start, $g: 0px);
+    flex-direction: column;
+
+    >h2 {
+        font-family: Karla;
+        font-weight: 700;
+        font-size: 128px;
+        color: #3DCFB6;
+    }
+
+    >h3 {
+        font-size: 64px;
+        font-family: Fira Code;
+        font-weight: 700;
+    }
+}
+
+.project-info-wrapper {
+    @include dflex($ai: start, $g: 32px);
+    flex-direction: column;
+
+    >span {
+        color: #3DCFB6;
+        font-family: Fira Code;
+        font-size: 24px;
+        font-weight: 700;
+    }
+
+    >p {
+        font-family: Karla;
+        font-size: 18px;
+        line-height: 120%;
+    }
+}
+
+.technologies-wrapper {
+    @include dflex($g: 16px);
+}
+
+.technologie {
+    @include dflex($g:4px);
+}
+
+.next-project {
+    position: absolute;
+    bottom: 40px;
+    right: 96px;
+}

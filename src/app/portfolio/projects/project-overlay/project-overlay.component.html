@@ -1,0 +1,54 @@
+<div (click)="closeOverlay()" class="project-overlay-background">
+
+    <div (click)="$event.stopPropagation()" class="overlay-container">
+
+        <div class="overlay-left">
+            <div class="headlines">
+                <h2>{{ (projectIndex + 1) < 10 ? '0' + (projectIndex + 1) : (projectIndex + 1) }}</h2>
+
+                        <h3>{{ project.name }}</h3>
+            </div>
+
+            <div class="project-info-wrapper">
+
+                <span>What is this project about?</span>
+
+                <p>{{ project.description }}</p>
+
+                <div class="technologies-wrapper">
+                    @for (technologie of project.technologies; track $index) {
+                    <div class="technologie">
+                        <img [src]="'assets/icons/icons-green/' + technologie.iconPath" alt="">
+                        <span>{{ technologie.iconName}}</span>
+                    </div>
+                    }
+                </div>
+
+                <div class="btn-wrapper">
+                    <a class="overlay-btn" href="">
+                        GitHub
+                        <img src="assets/img/green-arrow_outward.png" alt="">
+                    </a>
+
+                    <a class="overlay-btn" href="">
+                        Live Test
+                        <img src="assets/img/green-arrow_outward.png" alt="">
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="overlay-right">
+
+            <div (click)="closeOverlay()" class="close-btn">
+                <img src="assets/img/close_small.png" alt="">
+            </div>
+
+            <img [src]="'assets/img/' + project.imagepath" alt="">
+
+            <div (click)="nextProject()" class="next-project">
+                <span>Next project</span>
+            </div>
+        </div>
+    </div>
+</div>

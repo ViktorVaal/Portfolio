@@ -22,7 +22,6 @@ body {
     margin: 0 auto;
     max-width: 1980px;
     padding: 0 96px;
-    position: relative;
     @include dflex($ai, $jc, $g);
     height: 100vh;
     width: 100%;

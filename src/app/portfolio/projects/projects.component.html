@@ -24,8 +24,10 @@
                 </div>
                 <img class="project-image"  [ngStyle]="{ top: (($index + 1) * -18) + 'px' }" [src]="'assets/img/' + project.name + '-hover-image.png'" alt="">
             </div>
-            }
-        </div>
+        }
     </div>
 </div>
+</div>
+
+<app-project-overlay *ngIf="selectedProjectIndex !== null" [projectIndex]="selectedProjectIndex" (close)="closeProjectOverlay()"></app-project-overlay>
 
