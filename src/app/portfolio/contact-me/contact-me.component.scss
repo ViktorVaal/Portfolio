@@ -1,0 +1,174 @@
+@import '../../../styles.scss';
+
+.contact-me-wrapper {
+    @include dflex($jc: space-between);
+    color: white;
+    height: 100%;
+
+    >div {
+        width: 45%;
+        height: 100%;
+    }
+}
+
+.contact-me-left-wrapper {
+    @include dflex($ai: start, $g: 40px);
+    flex-direction: column;
+
+    >.left-text {
+        @include dflex($g: 16px, $ai: start);
+        flex-direction: column;
+
+        >span {
+            color: #3DCFB6;
+            font-size: 24px;
+            font-weight: 700;
+            font-family: Fira Code;
+        }
+
+        >p {
+            font-size: 16px;
+            font-family: Karla;
+            font-weight: 400;
+        }
+    }
+
+    >h3,
+    h2 {
+        color: #3DCFB6;
+    }
+
+    >h3 {
+        font-family: Karla;
+        font-size: 24px;
+        font-weight: 500;
+    }
+
+    >h2 {
+        font-family: Fira Code;
+        font-size: 64px;
+        font-weight: 700;
+    }
+}
+
+.green-text {
+    font-family: Karla;
+    color: #3DCFB6;
+    font-weight: 700;
+}
+
+.contact-me-right-wrapper {
+
+    >form {
+        height: 100%;
+        @include dflex();
+        flex-direction: column;
+
+        .form-container {
+            width: 100%;
+            @include dflex($g: 10px, $ai: start);
+            flex-direction: column;
+            padding: 32px;
+            border-top: 1px solid #3DCFB6;
+
+            >label {
+                color: #3DCFB6;
+                font-size: 24px;
+                font-family: Fira Code;
+                font-weight: 500;
+            }
+
+            >input {
+                background-color: unset;
+                border: none;
+                font-size: 18px;
+                font-family: Karla;
+
+                &:focus {
+                    border: none;
+                    outline: none;
+                }
+            }
+        }
+    }
+}
+
+.privacy-policy-container {
+    width: 100%;
+    @include dflex($g: 10px, $ai: start);
+    flex-direction: column;
+    padding: 32px;
+    border-top: 1px solid #3DCFB6;
+
+    >label {
+        font-size: 15px;
+        font-family: Karla;
+        position: relative;
+        cursor: pointer;
+
+        &:hover .checkbox-container {
+            background-color: rgba(61, 207, 182, 0.3);
+        }
+
+        >a {
+            text-decoration: none;
+            color: #3DCFB6;
+
+            &:hover {
+                color: white;
+                text-decoration: underline;
+                text-underline-offset: 10px;
+                text-decoration-color: #3DCFB6;
+            }
+        }
+    }
+}
+
+.checkbox-container {
+    cursor: pointer;
+    position: absolute;
+    left: -5%;
+    @include dflex();
+    width: 24px;
+    height: 24px;
+    border-radius: 38px;
+
+    &:hover {
+        background-color: rgba(61, 207, 182, 0.3);
+    }
+}
+
+textarea {
+    background-color: unset;
+    border: none;
+
+    &:focus {
+        border: none;
+        outline: none;
+    }
+}
+
+.submit-btn {
+    cursor: pointer;
+    padding: 12px 24px;
+    border-radius: 100px;
+    border: 1px solid white;
+    background-color: unset;
+    color: white;
+    font-family: Karla;
+    font-size: 18px;
+    
+    &:disabled {
+        color: rgba(255, 255, 255, 0.5);
+        cursor: unset;
+        border-color: rgba(255, 255, 255, 0.5);
+    }
+
+    >span {
+        font-family: Karla;
+    }
+}
+
+.d-none {
+    display: none;
+}

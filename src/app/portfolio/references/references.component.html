@@ -2,9 +2,9 @@
     <h3>What my colleagues say about me</h3>
 
     <div class="referenc-cards-slider">
+        <img class="quotes" src="assets/img/quotes.png" alt="">
         @for (reference of references; track $index) {
         <div class="reference-card" 
-        
             [class.center]="currentReference == $index" 
             [class.left]="getLeftIndex() == $index"
             [class.right]="getRightIndex() == $index" 

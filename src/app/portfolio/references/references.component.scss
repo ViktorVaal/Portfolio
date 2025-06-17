@@ -58,13 +58,13 @@
 
 .reference-card.left {
     cursor: pointer;
-    transform: translateX(calc(-150% - 32px)) scale(0.85); // links verschoben und skaliert
+    transform: translateX(calc(-150% - 32px)) scale(0.85);
     opacity: 0.5;
 }
 
 .reference-card.right {
     cursor: pointer;
-    transform: translateX(calc(50% + 32px)) scale(0.85); // rechts verschoben und skaliert
+    transform: translateX(calc(50% + 32px)) scale(0.85);
     opacity: 0.5;
 }
 
@@ -128,4 +128,11 @@
     &:hover {
         transform: translateX(5px) scale(1.08);
     }
+}
+
+.quotes {
+    position: absolute;
+    top: 5px;
+    z-index: 10;
+    left: 29.5%;
 }

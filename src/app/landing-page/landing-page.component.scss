@@ -32,57 +32,6 @@
   }
 }
 
-.sliding-link {
-  overflow: hidden;
-  position: relative;
-  display: inline-block;
-  padding: 12px 24px;
-  border: 1px solid white;
-  border-radius: 100px;
-  color: white;
-  text-decoration: none;
-  font-size: 18px;
-  font-family: Karla;
-  transition: border-color 0.3s, color 0.3s;
-
-  &:hover {
-    color: #3DCFB6;
-    border-color: #3DCFB6;
-  }
-
-  .link-text {
-    display: inline-block;
-    white-space: nowrap;
-    animation: none;
-  }
-
-  &:hover .link-text {
-    animation: slide-through 2s infinite linear;
-  }
-}
-
-@keyframes slide-through {
-  0% {
-    transform: translateX(0);
-    opacity: 1;
-  }
-
-  49% {
-    transform: translateX(-150%);
-    opacity: 0;
-  }
-
-  50% {
-    transform: translateX(150%);
-    opacity: 0;
-  }
-
-  100% {
-    transform: translateX(0);
-    opacity: 1;
-  }
-}
-
 .left-right-wrapper {
   padding: 0 96px;
   width: 100%;

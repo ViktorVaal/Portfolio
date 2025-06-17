@@ -19,12 +19,12 @@ body {
 }
 
 @mixin componentBaseStyle($ai: center, $jc: center, $g: 0) {
-    margin: 0 auto;
-    max-width: 1980px;
-    padding: 0 96px;
-    @include dflex($ai, $jc, $g);
-    height: 100vh;
-    width: 100%;
+  margin: 0 auto;
+  max-width: 1980px;
+  padding: 0 96px;
+  @include dflex($ai, $jc, $g);
+  height: 100vh;
+  width: 100%;
 }
 
 /* karla-200 - latin */
@@ -240,6 +240,60 @@ body {
   animation: appear linear;
   animation-timeline: view();
   animation-range: entry 0 cover 40%;
+}
+
+.sliding-link {
+  overflow: hidden;
+  position: relative;
+  display: inline-block;
+  padding: 12px 24px;
+  border: 1px solid white;
+  border-radius: 100px;
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+  font-family: Karla;
+  transition: border-color 0.3s, color 0.3s;
+
+  &:hover {
+    color: #3DCFB6;
+    border-color: #3DCFB6;
+  }
+
+
+
+  &:hover .link-text {
+    animation: slide-through 2s infinite linear;
+  }
+}
+
+.link-text {
+  font-family: Karla;
+  display: inline-block;
+  white-space: nowrap;
+  animation: none;
+}
+
+@keyframes slide-through {
+  0% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+
+  49% {
+    transform: translateX(-150%);
+    opacity: 0;
+  }
+
+  50% {
+    transform: translateX(150%);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
 }
 
 @keyframes appear {

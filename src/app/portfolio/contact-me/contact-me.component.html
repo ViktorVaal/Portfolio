@@ -1,1 +1,56 @@
-<p>contact-me works!</p>
+<div class="contact-me-wrapper appear">
+
+    <div class="contact-me-left-wrapper">
+        <h3>Contact me</h3>
+
+        <h2>Let's work together</h2>
+
+        <div class="left-text">
+
+            <span>Got a problem to solve?</span>
+
+            <p>Encourage people to contact you and describe what role you are interested in. <br>
+                Show that you will add value to their projects through your work. <br>
+                <br>
+                Need a Frontend developer? <span class="green-text">Let's talk!</span>
+            </p>
+        </div>
+    </div>
+
+    <div class="contact-me-right-wrapper">
+        <form>
+
+            <div class="form-container color-green">
+                <label for="name">What's your name?</label>
+                <input type="text" id="name" name="name" placeholder="Your name goes here">
+            </div>
+
+            <div class="form-container color-green">
+                <label for="email">What's your email?</label>
+                <input type="email" id="email" name="email" placeholder="youremail@email.com">
+            </div>
+
+            <div class="form-container color-green">
+                <label for="message">How can I help you?</label>
+                <textarea class="message" name="message" id="message" placeholder="Hello Viktor, I am interested in..."></textarea>
+            </div>
+
+            <div class="privacy-policy-container">
+                <label  class="checkbox" for="checkbox">
+                    <input (click)="toggleCheckBox()" class="d-none" id="checkbox" type="checkbox">
+                    <div class="checkbox-container">
+                        <img *ngIf="privacyPolicyChecked === false" class="cstm-checkbox" src="assets/img/check_box.png" alt="">
+                        <img *ngIf="privacyPolicyChecked === true" class="cstm-checkbox" src="assets/img/check_box_checked.png" alt="">
+                    </div>
+                    I've read the <a href="privacy-policy">privacy policy</a> and agree to the processing of my data as
+                    outlined.
+                </label>
+            </div>
+
+            <button [disabled]="privacyPolicyChecked == false" class="submit-btn sliding-link" type="submit">
+                <span [class.link-text]="privacyPolicyChecked == true">Say Hello ;)</span>
+            </button>
+
+        </form>
+    </div>
+</div>
