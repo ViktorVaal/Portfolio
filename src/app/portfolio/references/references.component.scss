@@ -1,0 +1,131 @@
+@import '../../../styles.scss';
+
+.references-wrapper {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    max-width: 1980px;
+    height: 100%;
+    @include dflex($jc: space-between);
+    flex-direction: column;
+    color: white;
+    font-family: Karla;
+    font-size: 18px;
+
+    >h3 {
+        color: #3DCFB6;
+        font-family: Fira Code;
+        font-weight: 700;
+        font-size: 32px;
+    }
+
+}
+
+.referenc-cards-slider {
+    width: 100%;
+    @include dflex($g: 64px);
+    overflow: hidden;
+    position: relative;
+    gap: 32px;
+    height: 300px;
+}
+
+.reference-card {
+    position: absolute;
+    left: 50%;
+    height: 274px;
+    width: 632px;
+    background-color: rgba(61, 207, 183, 0.3);
+    border: #3DCFB6 1px solid;
+    border-radius: 32px;
+    padding: 48px 40px;
+    @include dflex($jc: space-between, $ai: start);
+    flex-direction: column;
+    transition: all 300ms ease-in-out;
+
+    >.comment-author {
+        width: 100%;
+        @include dflex($g: 16px);
+    }
+}
+
+.reference-card.center {
+    transform: translateX(-50%) scale(1);
+    opacity: 1;
+    pointer-events: auto;
+    background-color: rgba(61, 207, 183, 0.4);
+}
+
+.reference-card.left {
+    cursor: pointer;
+    transform: translateX(calc(-150% - 32px)) scale(0.85); // links verschoben und skaliert
+    opacity: 0.5;
+}
+
+.reference-card.right {
+    cursor: pointer;
+    transform: translateX(calc(50% + 32px)) scale(0.85); // rechts verschoben und skaliert
+    opacity: 0.5;
+}
+
+.hl {
+    height: 1px;
+    background-color: white;
+    flex: 1;
+}
+
+.slider-fade-left,
+.slider-fade-right {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 200px;
+    pointer-events: none;
+}
+
+.slider-fade-left {
+    left: 0;
+    background: linear-gradient(to right, #1C1C1C, rgba(28, 28, 28, 0));
+}
+
+.slider-fade-right {
+    right: 0;
+    background: linear-gradient(to left, #1C1C1C, rgba(28, 28, 28, 0));
+}
+
+.arrow-slider-container {
+    @include dflex($g: 20px);
+}
+
+.dot {
+    width: 8px;
+    height: 8px;
+    background-color: white;
+    border-radius: 100%;
+}
+
+.arrow-hover-left {
+    cursor: pointer;
+    transition: all 125ms ease-in-out;
+
+    &:hover path {
+        fill: #3DCFB6;
+    }
+
+    &:hover {
+        transform: translateX(-5px) scale(1.08);
+    }
+}
+
+.arrow-hover-right {
+    cursor: pointer;
+    transition: all 125ms ease-in-out;
+
+    &:hover path {
+        fill: #3DCFB6;
+    }
+
+    &:hover {
+        transform: translateX(5px) scale(1.08);
+    }
+}

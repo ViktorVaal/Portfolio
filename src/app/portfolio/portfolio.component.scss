@@ -22,12 +22,16 @@
 
 .projects {
     @include componentBaseStyle($jc: start, $ai: start);
-    height: calc(175px + 473px);
+    height: 700px;
     position: relative;
+}
+
+.references {
+    @include componentBaseStyle();
+    height: 452px
 }
 
 .contact-me {
     @include componentBaseStyle();
-    
 }
 

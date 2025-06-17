@@ -5,6 +5,7 @@ import { MovingCursorShadowComponent } from "../moving-cursor-shadow/moving-curs
 import { TechnologiesComponent } from './technologies/technologies.component';
 import { ProjectsComponent } from './projects/projects.component';
 import { ContactMeComponent } from './contact-me/contact-me.component';
+import { ReferencesComponent } from './references/references.component';
 
 @Component({
   selector: 'app-portfolio',
@@ -15,7 +16,8 @@ import { ContactMeComponent } from './contact-me/contact-me.component';
     MovingCursorShadowComponent,
     TechnologiesComponent,
     ProjectsComponent,
-    ContactMeComponent
+    ContactMeComponent,
+    ReferencesComponent
   ],
   templateUrl: './portfolio.component.html',
   styleUrl: './portfolio.component.scss'

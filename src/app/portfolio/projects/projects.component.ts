@@ -20,9 +20,11 @@ export class ProjectsComponent {
 
   openProjectOverlay(index: number) {
     this.selectedProjectIndex = index;
+    document.body.style.overflow = 'hidden';
   }
-
+  
   closeProjectOverlay() {
     this.selectedProjectIndex = null;
+    document.body.style.overflow = '';
   }
 }

@@ -1,6 +1,7 @@
 @import '../../../../styles.scss';
 
 .project-overlay-background {
+    z-index: 100;
     padding: 0 96px;
     position: fixed;
     top: 0;
