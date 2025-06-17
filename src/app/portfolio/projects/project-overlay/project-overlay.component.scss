@@ -144,5 +144,14 @@
         position: absolute;
         top: 0;
         right: 0;
+        transition: all 125ms linear;
+
+        &:hover {
+            scale: 1.3;
+        }
+
+        &:hover path {
+            fill: #3DCFB6;
+        }
     }
 }
