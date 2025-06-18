@@ -6,6 +6,7 @@ import { TechnologiesComponent } from './technologies/technologies.component';
 import { ProjectsComponent } from './projects/projects.component';
 import { ContactMeComponent } from './contact-me/contact-me.component';
 import { ReferencesComponent } from './references/references.component';
+import { FooterComponent } from './footer/footer.component';
 
 @Component({
   selector: 'app-portfolio',
@@ -17,7 +18,8 @@ import { ReferencesComponent } from './references/references.component';
     TechnologiesComponent,
     ProjectsComponent,
     ContactMeComponent,
-    ReferencesComponent
+    ReferencesComponent,
+    FooterComponent
   ],
   templateUrl: './portfolio.component.html',
   styleUrl: './portfolio.component.scss'

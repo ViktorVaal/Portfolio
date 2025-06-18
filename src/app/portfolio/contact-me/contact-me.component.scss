@@ -1,6 +1,7 @@
 @import '../../../styles.scss';
 
 .contact-me-wrapper {
+    width: 100%;
     @include dflex($jc: space-between);
     color: white;
     height: 100%;

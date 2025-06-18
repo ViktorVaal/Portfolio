@@ -62,3 +62,83 @@
         }
     }
 }
+
+.logo-container {
+    position: relative;
+    height: 48px;
+    width: fit-content;
+    @include dflex();
+
+    >.home-link {
+        position: relative;
+        height: 48px;
+        width: fit-content;
+        @include dflex($g: 5px);
+        text-decoration: none;
+
+        >.initials {
+            @include dflex();
+            flex-direction: column;
+            height: 48px;
+            position: relative;
+            pointer-events: none;
+
+            >.first-initial {
+                position: absolute;
+                top: -7px;
+                right: 0;
+                color: #3DCFB6;
+                font-size: 33px;
+                font-family: Raleway;
+                font-weight: 700;
+                transform: rotate(90deg);
+                transition: all 125ms ease-in-out;
+            }
+
+            >.second-initial {
+                position: absolute;
+                right: 0;
+                bottom: -6px;
+                color: #3DCFB6;
+                font-size: 33px;
+                font-family: Raleway;
+                font-weight: 700;
+                transition: all 125ms ease-in-out;
+            }
+
+        }
+
+        >.full-name {
+            @include dflex($jc: end);
+            color: white;
+            font-family: Raleway;
+            font-size: 30px;
+            font-weight: 800;
+            line-height: 23px;
+            -webkit-text-fill-color: white;
+            -webkit-text-stroke: 0;
+            transition: all 125ms ease-in-out;
+        }
+    }
+
+    .home-link:hover {
+
+        .full-name {
+            color: transparent;
+            -webkit-text-fill-color: transparent;
+            -webkit-text-stroke: 1px white; // oder #3DCFB6 für grün
+        }
+
+        .first-initial {
+            color: transparent;
+            -webkit-text-fill-color: transparent;
+            -webkit-text-stroke: 1px #3DCFB6; // oder #3DCFB6 für grün
+        }
+
+        .second-initial {
+            color: transparent;
+            -webkit-text-fill-color: transparent;
+            -webkit-text-stroke: 1px #3DCFB6; // oder #3DCFB6 für grün
+        }
+    }
+}
