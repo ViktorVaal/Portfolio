@@ -1,32 +1,3 @@
-* {
-  margin: 0;
-  box-sizing: border-box;
-  font-family: Fira Code;
-  scroll-behavior: smooth;
-}
-
-body {
-  cursor: url('./assets/img/cursor.png') 5 1, auto;
-  margin: 0;
-  background: linear-gradient(45deg, #1C1C1C 70%, #08463B);
-}
-
-@mixin dflex($ai: center, $jc: center, $g: 0) {
-  display: flex;
-  align-items: $ai;
-  justify-content: $jc;
-  gap: $g;
-}
-
-@mixin componentBaseStyle($ai: center, $jc: center, $g: 0) {
-  margin: 0 auto;
-  max-width: 1980px;
-  padding: 0 96px;
-  @include dflex($ai, $jc, $g);
-  height: 100vh;
-  width: 100%;
-}
-
 /* karla-200 - latin */
 @font-face {
   font-display: swap;
@@ -275,6 +246,35 @@ body {
   font-style: normal;
   font-weight: 800;
   src: url('./assets/fonts/raleway/raleway-v36-latin-800.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
+* {
+  margin: 0;
+  box-sizing: border-box;
+  font-family: Fira Code;
+  scroll-behavior: smooth;
+}
+
+body {
+  cursor: url('./assets/img/cursor.png') 5 1, auto;
+  margin: 0;
+  background: linear-gradient(45deg, #1C1C1C 70%, #08463B);
+}
+
+@mixin dflex($ai: center, $jc: center, $g: 0) {
+  display: flex;
+  align-items: $ai;
+  justify-content: $jc;
+  gap: $g;
+}
+
+@mixin componentBaseStyle($ai: center, $jc: center, $g: 0) {
+  margin: 0 auto;
+  max-width: 1980px;
+  padding: 0 96px;
+  @include dflex($ai, $jc, $g);
+  height: 100vh;
+  width: 100%;
 }
 
 .appear {

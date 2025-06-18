@@ -6,7 +6,7 @@
     width: 100%;
     max-width: 1980px;
     height: 100%;
-    @include dflex($jc: space-between);
+    @include dflex($jc: space-between, $g: 48px);
     flex-direction: column;
     color: white;
     font-family: Karla;

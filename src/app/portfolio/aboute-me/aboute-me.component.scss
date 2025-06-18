@@ -12,7 +12,6 @@
     align-self: flex-start;
     width: auto;
     max-width: 50%;
-    margin-top: 300px;
 
     >.profile-picture {
         filter: grayscale(100);
@@ -42,7 +41,6 @@
 .aboute-me-wrapper {
     @include dflex($ai: start, $g: 20px);
     flex-direction: column;
-    margin-bottom: 300px;
     align-self: flex-end;
     color: white;
     font-size: 18px;
@@ -84,6 +82,20 @@
         >img {
             transform: translateX(-50%);
         }
+    }
+}
+
+.aboute-me-text {
+    font-family: Karla;
+}
+
+.short-info-text {
+    font-family: Karla;
+    color: rgba(255, 255, 255, 0.8);
+    transition: all 125ms ease-in-out;
+
+    &:hover {
+        color: white;
     }
 }
 

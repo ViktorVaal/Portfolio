@@ -4,17 +4,20 @@
     @include componentBaseStyle();
     position: relative;
     flex-direction: column;
+    margin-bottom: 96px;
     // background: linear-gradient(45deg, #1C1C1C 30%, #08463B);
 }
 
 .aboute-me {
      @include componentBaseStyle($jc: space-between);
-    // background: linear-gradient(45deg, #1C1C1C 70%, #08463B);
+    padding: 96px;
+    height: 850px;
 }
 
 .technologies {
     @include componentBaseStyle($ai: start);
-    height: 695px;
+    padding: 96px;
+    height: fit-content;
     width: 100vw;
     max-width: 1980px;
     background: radial-gradient(22.43% 43.85% at 1.22% 52.45%, rgb(6, 51, 43) 0%, #1C1C1C 100%);
@@ -22,20 +25,26 @@
 
 .projects {
     @include componentBaseStyle($jc: start, $ai: start);
-    height: 700px;
+    padding: 96px;
+    height: fit-content;
     position: relative;
 }
 
 .references {
     @include componentBaseStyle();
-    height: 452px
+    padding: 96px;
+    height: fit-content;
 }
 
 .contact-me {
     @include componentBaseStyle();
+    padding: 96px;
+    height: fit-content;
 }
 
 .footer {
     @include componentBaseStyle();
+    padding: 96px;
+    height: fit-content;
 }
 

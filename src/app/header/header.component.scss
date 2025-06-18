@@ -66,8 +66,8 @@
 .logo-container {
     position: relative;
     height: 48px;
-    width: fit-content;
-    @include dflex();
+    width: 117px;
+    @include dflex($jc: end);
 
     >.home-link {
         position: relative;

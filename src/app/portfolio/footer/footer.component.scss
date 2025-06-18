@@ -1,0 +1,69 @@
+@import '../../../styles.scss';
+@import '../../header/header.component.scss';
+
+.footer-wrapper {
+    @include dflex($jc: space-between);
+    width: 100%;
+    height: 126px;
+}
+
+.footer-left-wrapper {
+    @include dflex($ai: start, $jc: space-between);
+    flex-direction: column;
+    height: 100%;
+
+    >.left-text-container {
+        @include dflex($ai: start, $g: 8px);
+        flex-direction: column;
+
+        >span {
+            color: white;
+            font-family: Karla;
+            font-size: 16px;
+            font-weight: 400;
+        }
+    }
+}
+
+.footer-middle-wrapper {
+    color: #3DCFB6;
+    font-family: Fira Code;
+    font-size: 18px;
+}
+
+.footer-right-wrapper {
+    @include dflex($ai: start, $g: 8px);
+    flex-direction: column;
+
+    >a {
+        position: relative;
+        text-decoration: none;
+        color: white;
+        font-family: Karla;
+        font-size: 16px;
+        transition: all 125ms ease-in-out;
+
+        &:hover {
+            color: #3DCFB6;
+        }
+
+        &::before {
+            opacity: 0;
+            color: #3DCFB6;
+            content: '';
+            position: absolute;
+            left: -10px;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 6px;
+            height: 6px;
+            background-color: currentColor;
+            border-radius: 50%;
+            transition: all 125ms ease-in-out;
+        }
+
+        &:hover::before {
+            opacity: 1;
+        }
+    }
+}
